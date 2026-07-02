@@ -1,0 +1,28 @@
+; Print the first 10 Fibonacci numbers, one per line.
+; heap[0] holds the loop counter; the stack holds the pair (a, b).
+
+    push 0
+    push 10
+    store           ; heap[0] = 10
+    push 0          ; a = 0
+    push 1          ; b = 1
+loop:
+    push 0
+    load
+    jz done         ; while heap[0] != 0
+    over
+    outn            ; print a
+    push '\n'
+    outc
+    swap
+    over
+    add             ; (a, b) -> (b, a + b)
+    push 0          ; heap[0] -= 1
+    push 0
+    load
+    push 1
+    sub
+    store
+    jmp loop
+done:
+    halt

@@ -1,0 +1,14 @@
+; cat — copy stdin to stdout, one character at a time.
+; `inc` pushes -1 at end of input.
+
+loop:
+    inc             ; read one character
+    dup
+    push -1
+    eq
+    jnz done        ; stop at EOF
+    outc
+    jmp loop
+done:
+    pop             ; discard the -1 sentinel
+    halt

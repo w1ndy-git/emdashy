@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emdashy"
+version = "1.0.0"
+description = "Emdashy — an esoteric programming language comprised only of em dashes, with a full compiler and interpreter toolchain."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["esolang", "esoteric", "em dash", "compiler", "interpreter"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+]
+
+[project.scripts]
+emdash = "emdashy.cli:main"
+
+[tool.setuptools]
+packages = ["emdashy"]

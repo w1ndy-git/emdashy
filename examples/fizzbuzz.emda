@@ -1,0 +1,50 @@
+; FizzBuzz from 1 to 100. heap[0] holds the current number.
+
+    push 0
+    push 1
+    store               ; i = 1
+loop:
+    push 0
+    load
+    push 100
+    gt
+    jnz done            ; while i <= 100
+    push 0
+    load
+    push 15
+    mod
+    jz fizzbuzz
+    push 0
+    load
+    push 3
+    mod
+    jz fizz
+    push 0
+    load
+    push 5
+    mod
+    jz buzz
+    push 0
+    load
+    outn
+    jmp next
+fizzbuzz:
+    prints "FizzBuzz"
+    jmp next
+fizz:
+    prints "Fizz"
+    jmp next
+buzz:
+    prints "Buzz"
+next:
+    push '\n'
+    outc
+    push 0              ; i += 1
+    push 0
+    load
+    push 1
+    add
+    store
+    jmp loop
+done:
+    halt

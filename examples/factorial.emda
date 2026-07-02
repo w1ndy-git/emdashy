@@ -1,0 +1,27 @@
+; Read an integer n from stdin and print n!.
+; Demonstrates subroutines: `fact` consumes n and leaves n! on the stack.
+
+    inn
+    call fact
+    outn
+    push '\n'
+    outc
+    halt
+
+; fact: ( n -- n! )  iterative, using an accumulator kept on the stack
+fact:
+    push 1          ; ( n acc )
+fact_loop:
+    over            ; ( n acc n )
+    jz fact_done    ; when n == 0 the accumulator is the answer
+    over            ; ( n acc n )
+    mul             ; ( n acc*n )
+    swap
+    push 1
+    sub
+    swap            ; ( n-1 acc )
+    jmp fact_loop
+fact_done:
+    swap
+    pop             ; drop the counter, keep the accumulator
+    ret

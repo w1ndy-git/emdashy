@@ -1,0 +1,15 @@
+; Truth machine: read a number; 0 prints "0" and stops,
+; anything else prints "1" forever.
+
+    inn
+    jz zero
+one:
+    push '1'
+    outc
+    jmp one
+zero:
+    push '0'
+    outc
+    push '\n'
+    outc
+    halt

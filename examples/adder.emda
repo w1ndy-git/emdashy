@@ -1,0 +1,10 @@
+; Read two integers from stdin and print their sum.
+; The smallest useful interactive program — a good first example.
+
+    inn
+    inn
+    add
+    outn
+    push '\n'
+    outc
+    halt

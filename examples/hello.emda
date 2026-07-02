@@ -1,0 +1,6 @@
+; Hello, World! in Emdashy assembly.
+; Assemble with:  emdash asm examples/hello.emda
+; Run with:       emdash run examples/hello.emd
+
+prints "Hello, World!\n"
+halt
