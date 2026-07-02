@@ -155,3 +155,9 @@ part that executes.
 **How do I type an em dash?** — You don't; you write `.emda` assembly and
 run `emdash asm`. (But if you insist: Compose `---` on Linux, Option+Shift+Hyphen
 on macOS, Alt+0151 on Windows.)
+
+## License
+
+Copyright (c) 2026 w1ndy-git. Released under the MIT License — see
+[LICENSE](LICENSE) for the full text. The copyright notice must be
+preserved in all copies or substantial portions of the software.

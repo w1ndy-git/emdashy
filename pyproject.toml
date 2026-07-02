@@ -9,6 +9,7 @@ description = "Emdashy — an esoteric programming language comprised only of em
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
+authors = [{ name = "w1ndy-git", email = "hankhill2254@gmail.com" }]
 keywords = ["esolang", "esoteric", "em dash", "compiler", "interpreter"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
