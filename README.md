@@ -132,6 +132,27 @@ forms — readable `.emda` and the assembled `.emd`:
 * `fizzbuzz` — the interview classic, in punctuation
 * `truth_machine` — the esolang classic
 
+## Teaching Claude to write Emdashy
+
+The repository ships a [Claude Code](https://claude.com/claude-code) skill at
+[`.claude/skills/emdashy/`](.claude/skills/emdashy/SKILL.md) that teaches
+Claude the instruction set, the assembly syntax, the stack idioms, and the
+toolchain workflow.
+
+* **In this repo** — nothing to do: Claude Code discovers project skills
+  automatically. Just ask, e.g. *"write an Emdashy program that reverses
+  stdin"*.
+* **In any other project** — copy the skill into your user skills directory
+  so it is available everywhere:
+
+  ```console
+  $ mkdir -p ~/.claude/skills && cp -r .claude/skills/emdashy ~/.claude/skills/
+  ```
+
+The skill keeps Claude honest about the two rules humans also live by:
+never count em dashes by hand, and always run the program before calling
+it done.
+
 ## Development
 
 ```console
